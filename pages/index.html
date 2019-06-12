@@ -10,5 +10,14 @@
     <div>
         这是 pages/index.html 页面，app.js中设置使用了中间件  app.use('/pages', express.static(path.join(__dirname, 'pages')))
     </div>
+
+    <!---表单提交一个用户名和 密码 node服务器判断mongodb中是否存在此用户名后 进行相应的存储------>
+    <div id="formBox">
+        <form action="/users/register/" method="post">
+            用户名：<input type="text"  name="name" value="">
+            密码： <input type="text" name="password" value="">
+            提交： <button type="submit" >提交</button>
+        </form>
+    </div>
 </body>
 </html>

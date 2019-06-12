@@ -13,12 +13,12 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // view engine setup (使用ejs 模板引擎)
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 // html engine setup （直接发送 html文件）
-// app.set('views', path.join(__dirname, 'pages'));
-// app.set('view engine', 'html')
+app.set('views', path.join(__dirname, 'pages'));
+app.set('view engine', 'html')
 
 app.use(logger('dev'));
 app.use(express.json());
