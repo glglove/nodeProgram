@@ -23,7 +23,9 @@ router.post('/register', function(req, res, next) {
       name: req.body.name,
       password: req.body.password
     }
-    userApi.register(params)
+    userApi.register(params).then((res) => {
+      console.log(res)
+    })
   }else {
     res.status(400).send("用户名为空")
   }
