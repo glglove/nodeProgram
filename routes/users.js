@@ -17,18 +17,9 @@ const userApi = require('../api/userApi')
  * **/
 router.post('/register', function(req, res, next) {
   // res.send('respond with a resource');
-  if (req.body.name ) {
-    // 有用户名
-    let params = {
-      name: req.body.name,
-      password: req.body.password
-    }
-    userApi.register(params).then((res) => {
-      console.log(res)
-    })
-  }else {
-    res.status(400).send("用户名为空")
-  }
+  userApi.register(params).then((res) => {
+    console.log(res)
+  })
 });
 
 module.exports = router;
